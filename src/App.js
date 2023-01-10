@@ -1,8 +1,8 @@
 import { Box } from '@mui/system';
 import { Route, Routes } from 'react-router-dom';
 import './App.css';
-import ExerciseDetail from './Components/ExerciseDetail';
-import Home from './Components/Home';
+import ExerciseDetail from './pages/ExerciseDetail';
+import Home from './pages/Home';
 import Navbar from './Components/Navbar';
 
 function App() {
