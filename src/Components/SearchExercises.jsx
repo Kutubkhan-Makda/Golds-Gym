@@ -1,4 +1,5 @@
-import { Stack, Typography } from '@mui/material'
+import { Stack, TextField, Typography } from '@mui/material'
+import { Box } from '@mui/system'
 import React from 'react'
 
 const SearchExercises = () => {
@@ -8,6 +9,9 @@ const SearchExercises = () => {
         Awesome Exercises You <br />
         Should Know
       </Typography>
+      <Box position='relative' md='72px'>
+        <TextField height='76px' value='' onChange={(e)=>{}} placeholder='Search Exercises' type='text' sx={{input:{fontWeight:'700'}}}/>
+      </Box>
     </Stack>
   )
 }
