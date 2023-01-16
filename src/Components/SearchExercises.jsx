@@ -11,7 +11,7 @@ const SearchExercises = () => {
       </Typography>
       <Box position='relative' md='72px'>
         <TextField height='76px' value='' onChange={(e)=>{}} placeholder='Search Exercises' type='text' sx={{input:{fontWeight:'700',border:'none',borderRadius:'4px'},width:{lg:'1170px',xs:'350px'},backgroundColor:'#fff',borderRadius:'40px'}}/>
-        <Button className='search-btn' sx={{}}>Search</Button>
+        <Button className='search-btn' sx={{bgcolor:'#FF2625',color:'#fff',textTransform:'none',width:{lg:'175px',xs:'80px'}}}>Search</Button>
       </Box>
     </Stack>
   )
