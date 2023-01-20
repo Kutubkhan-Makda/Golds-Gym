@@ -2,6 +2,7 @@ import { Button, Stack, TextField, Typography } from '@mui/material'
 import { Box } from '@mui/system'
 import React, { useEffect, useState } from 'react'
 import { exerciseOption, fetchData } from '../utils/fetchData'
+import HorizontalScrollbar from './HorizontalScrollbar'
 
 const SearchExercises = () => {
   const [search, setSearch] = useState('')
@@ -26,7 +27,7 @@ const SearchExercises = () => {
         || exercise.bodyPart.toLowerCase().includes(search)
       )
       setSearch('');
-      setExercises(searchedExercises);
+      setExercises(searchExercises);
     }
   }
 
