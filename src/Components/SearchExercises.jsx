@@ -13,21 +13,22 @@ const SearchExercises = () => {
     const fetchExercisesData = async ()=>{
       const bodyPartsData = await fetchData('https://exercisedb.p.rapidapi.com/exercises/bodyPartList',exerciseOption)
       setbodyParts(['all',...bodyPartsData])
+      console.log(bodyParts)
     }
     fetchExercisesData();
   },[])
-
+  
   const handleSearch = async ()=>{
     if(search){
       const exercisesData = await fetchData('https://exercisedb.p.rapidapi.com/exercises',exerciseOption);
-      const searchExercises = exercisesData.filter(
+      const searchedExercises = exercisesData.filter(
         (exercise)=>exercise.name.toLowerCase().includes(search)
         || exercise.target.toLowerCase().includes(search)
         || exercise.equipment.toLowerCase().includes(search)
         || exercise.bodyPart.toLowerCase().includes(search)
       )
       setSearch('');
-      setExercises(searchExercises);
+      setExercises(searchedExercises);
     }
   }
 
