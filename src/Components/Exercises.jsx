@@ -1,8 +1,11 @@
+import { Box } from '@mui/material'
 import React from 'react'
 
-const Exercises = () => {
+const Exercises = ({exercises,setExercises,bodyPart}) => {
   return (
-    <div>Exercises</div>
+    <Box id='exercises' sx={{mt:{lg:'110px'}}}>
+
+    </Box>
   )
 }
 
