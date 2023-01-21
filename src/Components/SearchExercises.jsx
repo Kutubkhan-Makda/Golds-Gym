@@ -6,12 +6,12 @@ import HorizontalScrollbar from './HorizontalScrollbar'
 
 const SearchExercises = ({setExercises, bodyPart, setBodyPart}) => {
   const [search, setSearch] = useState('');
-  const [bodyParts, setBodyParts] = useState([]);
+  const [bodyParts, setBodyParts] = useState(['all']);
 
   useEffect(() => {
     const fetchExercisesData = async () => {
       const bodyPartsData = await fetchData('https://exercisedb.p.rapidapi.com/exercises/bodyPartList', exerciseOption);
-      setBodyParts(['all', ...bodyPartsData]);
+      setBodyParts([...bodyPartsData]);
     };
     fetchExercisesData();
   }, []);
