@@ -1,4 +1,5 @@
 import { Box, Typography } from '@mui/material'
+import { Stack } from '@mui/system'
 import React from 'react'
 
 const Exercises = ({exercises,setExercises,bodyPart}) => {
@@ -7,6 +8,9 @@ const Exercises = ({exercises,setExercises,bodyPart}) => {
       <Typography variant='h3' md='46px'>
         Showing Results
       </Typography>
+      <Stack direction='row'>
+
+      </Stack>
     </Box>
   )
 }
