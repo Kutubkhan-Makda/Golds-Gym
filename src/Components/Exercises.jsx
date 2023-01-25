@@ -1,6 +1,7 @@
 import { Box, Typography } from '@mui/material'
 import { Stack } from '@mui/system'
 import React from 'react'
+import ExerciseCard from './ExerciseCard'
 
 const Exercises = ({exercises,setExercises,bodyPart}) => {
   return (
@@ -9,7 +10,9 @@ const Exercises = ({exercises,setExercises,bodyPart}) => {
         Showing Results
       </Typography>
       <Stack direction='row' sx={{gap:{lg:'110px',xs:'50px'}}} flexWrap='wrap' justifyContent='center'>
-
+        {exercises.map((exercise,index)=>(
+          <ExerciseCard key={index} exercise={exercise}/>
+        ))}
       </Stack>
     </Box>
   )
