@@ -1,4 +1,4 @@
-import { Button, Typography } from '@mui/material'
+import { Button, Pagination, Typography } from '@mui/material'
 import { Stack } from '@mui/system'
 import React, { lazy } from 'react'
 import { Link } from 'react-router-dom'
@@ -19,7 +19,9 @@ const ExerciseCard = ({exercise}) => {
         </Typography>
       </Stack>
       <Stack mt='100px' alignItems='center'>
-        
+        {exercise.length>9 && (
+          <Pagination/>
+        )}
       </Stack>
     </Link>
   )
