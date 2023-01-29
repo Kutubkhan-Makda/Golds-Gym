@@ -18,6 +18,9 @@ const ExerciseCard = ({exercise}) => {
           {exercise.name}
         </Typography>
       </Stack>
+      <Stack mt='100px' alignItems='center'>
+        
+      </Stack>
     </Link>
   )
 }
